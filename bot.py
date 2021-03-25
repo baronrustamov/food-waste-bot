@@ -124,7 +124,8 @@ def confirmation(update, context):
         del user_data['Photo Provided']
         bot.send_photo(chat_id=chat_id, photo=open('user_photo.jpg', 'rb'), 
 		caption="<b>Есть доступная еда!</b> Подробности ниже: \n {}".format(facts_to_str(user_data)) +
-		"\n За дополнительной информацией обратитесь к поставщику {}".format(user.name), parse_mode=telegram.ParseMode.HTML)
+		"\n За дополнительной информацией обратитесь к поставщику {}".format(user.name) +
+        "\n \n Добавить еду можно в:" + bot.name ,parse_mode=telegram.ParseMode.HTML)
     else:
         del user_data['Photo Provided']
         bot.sendMessage(chat_id=chat_id, 
