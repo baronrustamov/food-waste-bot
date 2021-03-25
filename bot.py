@@ -5,7 +5,7 @@ from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters,
                           ConversationHandler)
 from googlemaps import Client as GoogleMaps
 import os
-import argparse
+import json
 
 tgt = json.load(open('./keys.json'))["tgt"]
 chati = json.load(open('./keys.json'))["chati"]
