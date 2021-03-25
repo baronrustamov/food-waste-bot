@@ -5,6 +5,11 @@ from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters,
                           ConversationHandler)
 from googlemaps import Client as GoogleMaps
 import os
+import argparse
+
+tgt = json.load(open('./keys.json'))["tgt"]
+chati = json.load(open('./keys.json'))["chati"]
+gmaps = json.load(open('./keys.json'))["gmaps"]
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -16,10 +21,10 @@ LOCATION, PHOTO, DIET, SERVINGS, TIME, CONFIRMATION = range(6)
 
 reply_keyboard = [['Confirm', 'Restart']]
 markup = ReplyKeyboardMarkup(reply_keyboard, resize_keyboard=True, one_time_keyboard=True)
-TOKEN = '1764334763:AAEQYsgGuuW63XsdNfGsoJ_QYg-VTg0Kwh4'
+TOKEN = tgt
 bot = telegram.Bot(token=TOKEN)
-chat_id = '-1001191410650'
-GMAPSAPI = 'AIzaSyCaBuyrNxZ1cer_Eta8dUjVTkCqS-MBq-8'
+chat_id = chati
+GMAPSAPI = gmaps
 gmaps = GoogleMaps(GMAPSAPI)
 
 PORT = int(os.environ.get('PORT', 5000))
