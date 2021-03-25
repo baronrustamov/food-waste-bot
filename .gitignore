@@ -1,3 +1,7 @@
 __pycache__/*
 .idea/*
 keys.json
+members.csv
+ses*
+testapp.py
+testapp_inv.py
