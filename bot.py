@@ -7,9 +7,9 @@ from googlemaps import Client as GoogleMaps
 import os
 import json
 
-tgt = json.load(open('./keys.json'))["tgt"]
-chati = json.load(open('./keys.json'))["chati"]
-gmaps = json.load(open('./keys.json'))["gmaps"]
+tgt = json.load(open('keys.json'))["tgt"]
+chati = json.load(open('keys.json'))["chati"]
+gmaps = json.load(open('keys.json'))["gmaps"]
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
